@@ -18,3 +18,14 @@ body{
       padding: 1rem; /* Adjust as needed */
     }
 
+/* Add this style for selected seats */
+.btn-selected {
+  background-color: #1DD100; /* Your desired color for selected seats */
+  color: #fff; /* Text color for selected seats */
+}
+
+/* Your existing hover style for seats */
+.btn:hover {
+  background-color: #1DD100; /* Your hover color */
+  color: #fff; /* Text color on hover */
+}

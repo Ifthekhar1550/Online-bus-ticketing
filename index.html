@@ -60,7 +60,9 @@ End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span>
 </h1>
 <p class="text-white">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a
 streamlined .</p>
-<button class="btn btn-md border-[#1DD100] bg-[#1DD100] text-black mt-4">Buy Tickets</button>
+<button class="btn btn-md border-[#1DD100] bg-[#1DD100] text-black mt-4" onclick="scrollToSeats()">Buy Tickets</button>
+
+
                 </div>
                 <div
                     class="absolute  flex flex-row items-center gap-4 bg-white text-black px-8 py-6 border border-solid border-l-0 border-r-0 border-t-0 border-b-[3px] border-green-700 rounded-3xl bottom-[-50px] left-28">
@@ -177,7 +179,7 @@ streamlined .</p>
         </div>
     </div>
     <div class="mt-3">
-        <a
+        <a id="seatsLeftButton"
             class="btn bg-green-700 bg-opacity-10 font-bold text-[#1DD100] lg:text-base rounded-xl border border-solid border-1 border-green-700 border-opacity-40 px-4"><img
                 src="./images/seat-green.png" alt="" srcset="">8 Seats left
         </a>
@@ -214,7 +216,7 @@ streamlined .</p>
 </div>
   
 
-<section class=" max-w-6xl mx-auto my-8 ">
+<section id="select-seats-section" class=" max-w-6xl mx-auto my-8 ">
    
 <div class="grid grid-cols-1 grid-cols-[8fr,4fr] bg-white  h-[518px] p-4 rounded-3xl gap-10">
 
@@ -241,23 +243,25 @@ streamlined .</p>
 <div class="grid grid-cols-2 gap-8 mt-6 mb-10">
 <div class="flex justify-around gap-4">
 <button class="btn bg-gray-350 hover:bg-[#1DD100]"> A </button>
-<button class="btn bg-gray-350 hover:bg-[#1DD100]"> A1 </button>
-<button class="btn bg-gray-350 hover:bg-[#1DD100]"> A2 </button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('A1')">A1</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('A2')">A2</button>
+
+
 </div>
 <div class="flex justify-around gap-4">
-<button class="btn bg-gray-350 hover:bg-[#1DD100]"> A3 </button>
-<button class="btn bg-gray-350 hover:bg-[#1DD100]"> A4 </button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('A3')">A3</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('A4')">A4</button>
 </div>
 </div>
 <div class="grid grid-cols-2 gap-8">
     <div class="flex justify-around gap-4">
         <button class="btn bg-gray-350 hover:bg-[#1DD100]">B</button>
-        <button class="btn bg-gray-350 hover:bg-[#1DD100]">B1</button>
-        <button class="btn bg-gray-350 hover:bg-[#1DD100]">B2</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('B1')">B1</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('B2')">B2</button>
     </div>
     <div class="flex justify-around gap-4">
-        <button class="btn bg-gray-350 hover:bg-[#1DD100]">B3</button>
-        <button class="btn bg-gray-350 hover:bg-[#1DD100]">B4</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('B3')">B3</button>
+<button class="btn bg-gray-350 hover:bg-[#1DD100]" onclick="selectSeat('B4')">B4</button>
     </div>
 </div>
 </div>
@@ -275,7 +279,7 @@ streamlined .</p>
     <h5 class="text-black font-semibold text-base">
 Seat
 
-    </h5><button class="bg-[#1DD100] text-white px-2 rounded-lg">1</button></div>
+    </h5><button id="bookedSeatsButton" class="bg-[#1DD100] text-white px-2 rounded-lg">1</button></div>
     <h5 class="text-black font-semibold text-base ">
     Class
     </h5>
@@ -289,7 +293,7 @@ Seat
         <h5 class="text-black font-semibold text-base">
             A1
 
-        </h5><button class="bg-[#1DD100] text-white px-2 rounded-lg">1</button>
+        </h5>
   
     <h5 class="text-black font-semibold text-base ">
         Economy
@@ -303,7 +307,7 @@ Seat
     <h5 class="text-black font-semibold text-base">
         A1
 
-    </h5><button class="bg-[#1DD100] text-white px-2 rounded-lg">1</button>
+    </h5>
 
     <h5 class="text-black font-semibold text-base ">
         Economy
@@ -357,6 +361,7 @@ Seat
     </section>
     
   </section>
+  <script src="./app.js"></script>
 </body>
 
 </html>
