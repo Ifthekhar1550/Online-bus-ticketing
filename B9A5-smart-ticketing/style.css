@@ -5,5 +5,16 @@ body{
     font-family: "Raleway", sans-serif;
 }
 
-
+ .custom-border {
+        margin-top: 20px;
+        margin-bottom: 40px;
+      max-width: 100vw!important;
+      border: 3px solid #34D10F;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-top-left-radius: 1.5rem; /* Equivalent to rounded-tl-3xl */
+      border-top-right-radius: 1.5rem; /* Equivalent to rounded-tr-3xl */
+      padding: 1rem; /* Adjust as needed */
+    }
 
